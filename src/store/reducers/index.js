@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import { REQ_LOGIN, LOGIN_SUCC, LOGIN_ERR, CHANGEA_COUNT } from "../actions";
+import { combineReducers } from "redux"
+import { REQ_LOGIN, LOGIN_SUCC, LOGIN_ERR, CHANGEA_COUNT } from "../actions"
 
 // 初始化state
 const userState = {
@@ -35,9 +35,10 @@ const commonReducer = (state = commonState, action) => {
     }
 }
 
-//使用redux的combineReducers方法将所有reducer打包起来
+// 使用redux的combineReducers方法将所有reducer打包起来
 const rootReducer = combineReducers({
   user: userReducer,
   common: commonReducer
-});
-export default rootReducer;
+})
+
+export default rootReducer

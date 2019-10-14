@@ -1,7 +1,7 @@
 const path = require('path')
-const { override, fixBabelImports, addLessLoader, addWebpackAlias } = require("customize-cra");
+const { override, fixBabelImports, addLessLoader, addWebpackAlias } = require("customize-cra")
 
-process.env.GENERATE_SOURCEMAP = "false";
+process.env.GENERATE_SOURCEMAP = "false"
 
 module.exports = override(
   fixBabelImports("import", {
@@ -19,4 +19,4 @@ module.exports = override(
     ["store"]: path.resolve(__dirname, "src/store")   
   })
 
-);
+)

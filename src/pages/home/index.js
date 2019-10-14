@@ -1,21 +1,21 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import React, { Component, Fragment } from "react"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
-import * as actions from "store/actions";
-import "./index.less";
+import * as actions from "store/actions"
+import "./index.less"
 
 const mapStateToProps = state => ({
     userinfo: state.user,
     common: state.common
-});
+})
 
 const mapDispatchToProps = dispatch => 
     bindActionCreators({
         ...actions
     },
-    dispatch);
+    dispatch)
 
 class Home extends Component {
 
@@ -38,10 +38,10 @@ class Home extends Component {
 
     componentDidMount() {
         let params = {
-            username: 'zhangsan',
+            username: 'zhangyanling',
             password: '123456'
         }
-        this.props.reqLogin(params);
+        this.props.reqLogin(params)
     }
 
     componentDidUpdate(prevProps, prevState){
@@ -49,13 +49,13 @@ class Home extends Component {
     }
 
     change = () => {
-        let num = this.props.common.count;
+        let num = this.props.common.count
         this.props.changeCount(++num)
     }
 
     render(){
-        const { userinfo, errMsg } = this.state;
-        const { count } = this.props.common;
+        const { userinfo, errMsg } = this.state
+        const { count } = this.props.common
         return (
             <Fragment>
                 {/* 路由 */}
@@ -78,4 +78,4 @@ class Home extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
