@@ -11,10 +11,11 @@ export default class ErrorBoundary extends React.Component {
     return { hasError: true }
   }
 
-  // componentDidCatch(error, info) {
-  //   // 你同样可以将错误日志上报给服务器
-  //   logErrorToMyService(error, info);
-  // }
+  componentDidCatch(error, info) {
+    // 你同样可以将错误日志上报给服务器
+    console.log(err, info)
+    // logErrorToMyService(error, info);
+  }
 
   render() {
     if (this.state.hasError) {
