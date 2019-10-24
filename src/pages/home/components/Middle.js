@@ -1,16 +1,17 @@
-import React,{ Fragment } from 'react'
+import React, { Fragment } from 'react'
 import './index.less'
 
 
 const Content = () => {
     return (
         <Fragment>
-            <div>
-                <button>左箭头</button>
-            </div>
-            <div>
-                <button>右箭头</button>
-            </div>
+            <button className='btn'>
+                <i className="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- iconArrows"></i>
+            </button>
+            <button className='btn centerSecondBtn'>
+                <i className="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1 iconArrows"></i>
+            </button>
+
         </Fragment>
     )
 }

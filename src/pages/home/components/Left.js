@@ -4,8 +4,8 @@ import './index.less'
 const Header = () => {
     return (
         <div>
-            <button>格式化</button>
-            <button>压缩模式</button>
+            <button className='btn'>格式化</button>
+            <button className='btn btnMargin'>压缩模式</button>
         </div>
         )
 }
